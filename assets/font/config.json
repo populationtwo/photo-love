@@ -1,0 +1,58 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "b714be5a812a474811604f700dfc87ce",
+      "css": "left-open",
+      "code": 59398,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "37910a1398001a5ccb541cb2a253a2c7",
+      "css": "right-open",
+      "code": 59399,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "c99e966e3d22ec0b9d8678fd524e5512",
+      "css": "facebook",
+      "code": 59393,
+      "src": "elusive"
+    },
+    {
+      "uid": "f9e7869be96161992f476eaa4219637d",
+      "css": "flickr",
+      "code": 59394,
+      "src": "elusive"
+    },
+    {
+      "uid": "09cad6e46ec29b279626434802012bba",
+      "css": "linkedin",
+      "code": 59395,
+      "src": "elusive"
+    },
+    {
+      "uid": "c37b15dbb7b146c359d45b577fba6c0e",
+      "css": "path",
+      "code": 59396,
+      "src": "elusive"
+    },
+    {
+      "uid": "26969cfbd811730075e4c657cc9fda2a",
+      "css": "twitter",
+      "code": 59397,
+      "src": "elusive"
+    },
+    {
+      "uid": "a4765de460cc6485b1ca5b36222f41d5",
+      "css": "twitter-bird",
+      "code": 59392,
+      "src": "websymbols"
+    }
+  ]
+}

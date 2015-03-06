@@ -1,0 +1,37 @@
+/* --------------------------------------------------------------
+	Variables
+-------------------------------------------------------------- */
+
+$rem-base: 16px !default;
+
+/**
+ * Colors
+ */
+
+$gray-darker:  #222;
+$gray-dark:    #333;
+$gray:         #444;
+$gray-light:   #999;
+$gray-lighter: #dee1e5;
+
+$seashell: #F1F1F1;
+$mine: #2e2e2e;
+$matisse: #21759b;
+/**
+ * Typography
+ */
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+$serif: 'PT Serif', $georgia, serif;
+$sans-serif: 'Montserrat', $helvetica, sans-serif;
+
+
+/**
+ * Responsive breakpoints
+ */
+$medium-screen: new-breakpoint(min-width 641px);
+$large-screen: new-breakpoint(min-width 1025px);
+
+
+
+

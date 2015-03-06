@@ -1,0 +1,176 @@
+/* --------------------------------------------------------------
+	Footer
+-------------------------------------------------------------- */
+
+.footer-wrapper {
+	background: $mine;
+	color: $gray-lighter;
+	a {
+		color: white(0.8);
+
+		&:hover {
+			color: white;
+
+		}
+	}
+}
+
+.page-footer {
+	@include outer-container();
+}
+
+.page-footer-inner {
+	padding: rem(50) 0;
+	overflow: hidden;
+}
+
+.bio {
+	@include span-columns(6);
+}
+
+.bio-image {
+	@include span-columns(4);
+
+}
+
+.bio-content {
+	@include span-columns(7);
+	@include omega();
+	h2 {
+		font-size: 18px;
+		font-style: italic;
+		font-weight: 400;
+		color: white(1);
+		margin-top: 0;
+	}
+	p {
+		color: white(0.8);
+	}
+}
+
+.skills {
+	@include span-columns(6);
+	@include omega();
+}
+
+.bio, .skills {
+	h3 {
+		font-family: $sans-serif;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: white;
+		a {
+			color: white;
+
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+// Progress Bars
+progress, progress[role] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	background-size: auto;
+	height: rem(30);
+	width: 100%;
+}
+
+// The unordered list
+.skills-graph {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+// The list item
+.skill {
+	margin-bottom: rem(20);
+	position: relative;
+	h3 {
+		color: #000;
+		left: 1em;
+		line-height: 1;
+		position: absolute;
+		top: 1em;
+		top: 50%;
+		font-size: rem(14);
+		margin: rem(-10) 0 0 0;
+
+	}
+	::-webkit-progress-value {
+		-webkit-animation: bar-fill 2s;
+		width: 0px;
+	}
+
+}
+
+// Style the bar colors
+.skill-bar::-webkit-progress-value {
+	background: white(0.9);
+}
+
+.skill-bar::-moz-progress-bar {
+	background: white(0.9);
+}
+
+// Animation Keyframes
+@-webkit-keyframes bar-fill {
+	0% {
+		width: 0;
+	}
+}
+
+@keyframes bar-fill {
+	0% {
+		width: 0;
+	}
+}
+
+.page-footer-bottom {
+	border-top: 1px solid white(0.2);
+	padding: rem(12) 0 rem(25);
+	overflow: hidden;
+	font-style: italic;
+	color: white(0.5);
+
+	a {
+		color: white(0.9);
+	}
+}
+
+
+
+.site-info {
+	@include span-columns(6);
+}
+.footer-links-social {
+	@include span-columns(6);
+	@include omega();
+}
+
+.footer-links {
+
+	@extend %inline-list;
+	float: right;
+	text-transform: uppercase;
+	font-size: rem(11);
+	font-weight: 600;
+	li {
+		padding: 0;
+		margin-left: rem(15);
+		font-size: rem(22);
+	}
+	a {
+		color: white(0.85);
+		@include transition(color, .1s, ease-out);
+		&:hover, &:focus {
+			color: white;
+
+		}
+	}
+}

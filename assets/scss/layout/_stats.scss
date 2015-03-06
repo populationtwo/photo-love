@@ -1,0 +1,98 @@
+#stats {
+	background: $seashell url("../img/leica.jpg") center 400px no-repeat;
+	padding-bottom: rem(300);
+}
+
+.stats-intro {
+	color: black(0.8);
+	text-align: center;
+	margin: 0 auto rem(60);
+	float: none;
+	width: 73%;
+	p {
+		font-style: italic;
+	}
+}
+
+.stats-content {
+	display: block;
+	overflow: hidden;
+	margin-left: 0;
+	list-style: none;
+
+	> * {
+		margin: 0;
+		float: left;
+		font-size: rem(11);
+		line-height: rem(11);
+		text-transform: uppercase;
+		color: $gray;
+		&:hover a, &:focus a {
+			text-decoration: underline;
+		}
+		a {
+			color: $gray;
+		}
+		&.current {
+			cursor: default;
+			color: $gray-dark;
+			a {
+				cursor: default;
+				color: $gray-dark;
+			}
+		}
+
+		&.current:hover, &.current:hover a, &.current:focus, &.current:focus a {
+			text-decoration: none;
+		}
+		&.unavailable {
+			color: $gray-light;
+			a {
+				color: $gray-light;
+			}
+
+			&:hover, &:hover a, &:focus,
+			a:focus {
+				text-decoration: none;
+				color: $gray-light;
+				cursor: default;
+			}
+		}
+
+		&:before {
+			content: "/";
+			color: black(0.15);
+			margin: 0 0.75rem;
+			position: absolute;
+			top: 42px;
+			left: -24px;
+			font-size: rem(100);
+
+		}
+
+		&:first-child:before {
+			content: " ";
+			margin: 0;
+		}
+	}
+}
+
+.stat {
+	text-align: center;
+	width: 25%;
+	position: relative;
+}
+
+.number {
+	font-size: rem(110);
+	line-height: 1;
+	font-style: italic;
+}
+
+.type {
+	display: inline-block;
+	font-style: italic;
+	font-size: rem(18);
+	color: black(0.6);
+	text-transform: none;
+}

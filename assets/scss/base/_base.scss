@@ -1,0 +1,190 @@
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: $gray;
+	font-size: rem(16);
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: rem(24);
+}
+
+/*--------------------------------------------------------------
+Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: rem(24);
+}
+
+ul,
+ol {
+	margin: 0 0 rem(24) rem(48);
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: rem(24);
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 rem(24) rem(24);
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+table {
+	margin: 0 0 rem(24);
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $seashell;
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		color: $matisse;
+		display: block;
+		font-size: rem(14);
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: rem(15) rem(23) rem(14);
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+
+
+}
+
+
+/* --------------------------------------------------------------
+Base elements
+-------------------------------------------------------------- */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $serif;
+}
+
+a {
+	text-decoration: none;
+	color: $matisse;
+	&:hover, &:focus, &:active {
+		text-decoration: underline;
+		outline: thin dotted;
+	}
+	&:hover, &:active {
+		outline: 0;
+	}
+
+}
+
+figure {
+	margin: 0;
+}
+
+.image-replace {
+	border: 0;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}
+
+.button {
+	background: $gray-lighter;
+	font-size: rem(14);
+	padding: rem(10) rem(18);
+	font-weight: normal;
+	margin: rem(6) 0;
+	margin-right: rem(12);
+	display: inline-block;
+	text-decoration: none;
+	min-width: rem(120);
+	font-style: italic;
+	&:hover, &:active {
+		color: #fff;
+		background: $gray;
+		text-decoration: none !important;
+	}
+}
