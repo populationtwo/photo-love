@@ -17,6 +17,8 @@
 
 .page-footer {
 	@include outer-container();
+	@extend .row;
+
 }
 
 .page-footer-inner {
@@ -25,17 +27,32 @@
 }
 
 .bio {
-	@include span-columns(6);
+	@include span-columns(12);
+	//	@include omega();
+	@include media($medium-screen){
+		//		padding: 0;
+
+		@include span-columns(6);
+	}
 }
 
 .bio-image {
-	@include span-columns(4);
+	@include span-columns(12);
+	@include media($small-screen){
+		//		padding: 0;
 
+		@include span-columns(4);
+	}
 }
 
 .bio-content {
-	@include span-columns(7);
+	@include span-columns(12);
 	@include omega();
+	@include media($small-screen){
+		//		padding: 0;
+
+		@include span-columns(8);
+	}
 	h2 {
 		font-size: 18px;
 		font-style: italic;
@@ -46,11 +63,19 @@
 	p {
 		color: white(0.8);
 	}
+
 }
 
 .skills {
-	@include span-columns(6);
-	@include omega();
+	@include span-columns(12);
+//	@include omega();
+	@include media($medium-screen){
+		//		padding: 0;
+
+		@include span-columns(6);
+		@include omega();
+	}
+
 }
 
 .bio, .skills {
@@ -137,7 +162,7 @@ progress, progress[role] {
 	overflow: hidden;
 	font-style: italic;
 	color: white(0.5);
-
+	@extend .row;
 	a {
 		color: white(0.9);
 	}
@@ -146,11 +171,21 @@ progress, progress[role] {
 
 
 .site-info {
-	@include span-columns(6);
+	@include span-columns(12);
+	@include media($medium-screen){
+		//		padding: 0;
+
+		@include span-columns(6);
+	}
 }
 .footer-links-social {
-	@include span-columns(6);
-	@include omega();
+	@include span-columns(12);
+	@include media($medium-screen){
+		//		padding: 0;
+		@include omega();
+
+		@include span-columns(6);
+	}
 }
 
 .footer-links {

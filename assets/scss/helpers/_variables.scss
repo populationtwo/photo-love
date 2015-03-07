@@ -29,6 +29,7 @@ $sans-serif: 'Montserrat', $helvetica, sans-serif;
 /**
  * Responsive breakpoints
  */
+$small-screen: new-breakpoint(min-width 321px);
 $medium-screen: new-breakpoint(min-width 641px);
 $large-screen: new-breakpoint(min-width 1025px);
 

@@ -1,6 +1,9 @@
 #stats {
 	background: $seashell url("../img/leica.jpg") center 400px no-repeat;
 	padding-bottom: rem(300);
+	.container {
+		@extend .row;
+	}
 }
 
 .stats-intro {
@@ -8,9 +11,16 @@
 	text-align: center;
 	margin: 0 auto rem(60);
 	float: none;
-	width: 73%;
+	width: 100%;
 	p {
 		font-style: italic;
+	}
+	//	@include omega();
+	@include media($medium-screen){
+		//		padding: 0;
+
+		width: 73%;
+
 	}
 }
 

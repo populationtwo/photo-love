@@ -19,7 +19,7 @@
 				<div class="page-footer-inner">
 					<article class="bio">
 						<?php
-						$the_query = new WP_Query( 'page_id=39066 ' );
+						$the_query = new WP_Query( 'page_id=15&page_id=39066' );
 						while ( $the_query->have_posts() ) : $the_query->the_post();?>
 							<h3 class="entry-title"><a href="<?php the_permalink(); ?>"
 													   title="<?php printf( esc_attr__( 'Permalink to %s', 'photolove' ), the_title_attribute( 'echo=0' ) ); ?>"
