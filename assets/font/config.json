@@ -7,6 +7,18 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "5211af474d3a9848f67f945e2ccaf143",
+      "css": "cancel",
+      "code": 59400,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "2e2dba0307a502a8507c1729084c7ab5",
+      "css": "cancel-circled2",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
       "uid": "b714be5a812a474811604f700dfc87ce",
       "css": "left-open",
       "code": 59398,
