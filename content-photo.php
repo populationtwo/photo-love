@@ -14,7 +14,8 @@
 	<div class="overlay">>
 		<a href="#" class="expand">		<?php the_title() ?>
 		</a>
-		<a class="close-overlay hidden">x</a>
+		<a class="close-overlay hidden"><i class="icon-cancel-circled2
+"></i></a>
 	</div>
 </div>
 

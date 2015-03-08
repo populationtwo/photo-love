@@ -127,21 +127,21 @@ progress, progress[role] {
 		margin: rem(-10) 0 0 0;
 
 	}
-	::-webkit-progress-value {
+
+	&.anim ::-webkit-progress-value  {
 		-webkit-animation: bar-fill 2s;
 		width: 0px;
+
+	}
+}
+	// Style the bar colors
+	.skill-bar::-webkit-progress-value {
+		background: white(0.9);
 	}
 
-}
-
-// Style the bar colors
-.skill-bar::-webkit-progress-value {
-	background: white(0.9);
-}
-
-.skill-bar::-moz-progress-bar {
-	background: white(0.9);
-}
+	.skill-bar::-moz-progress-bar {
+		background: white(0.9);
+	}
 
 // Animation Keyframes
 @-webkit-keyframes bar-fill {

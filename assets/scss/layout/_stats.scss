@@ -15,12 +15,8 @@
 	p {
 		font-style: italic;
 	}
-	//	@include omega();
 	@include media($medium-screen){
-		//		padding: 0;
-
 		width: 73%;
-
 	}
 }
 

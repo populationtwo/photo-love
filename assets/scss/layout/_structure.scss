@@ -131,13 +131,15 @@ a.close-overlay {
 	height: 45px;
 	font-size: 20px;
 	font-weight: 700;
-	color: #fff;
+	color: white(0.5);
 	line-height: 45px;
 	text-align: center;
-	background-color: #000;
 	cursor: pointer;
 	&.hidden {
 		display: none;
+	}
+	&:hover, &:focus {
+		color: white;
 	}
 }
 

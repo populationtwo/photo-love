@@ -47,19 +47,19 @@
 
 						<ul class="skills-graph">
 							<li class="skill">
-								<h3>Photography</h3>
+								<h3>Bowhunting skills</h3>
 								<progress class="skill-bar" max="100" value="60">
 									<strong>Skill Level: 60%</strong>
 								</progress>
 							</li>
 							<li class="skill">
-								<h3>Training Dragon</h3>
+								<h3>Dragon Training skills</h3>
 								<progress class="skill-bar" max="100" value="85">
 									<strong>Skill Level: 85%</strong>
 								</progress>
 							</li>
 							<li class="skill">
-								<h3>Kung Fu</h3>
+								<h3>Kung Fu skills</h3>
 								<progress class="skill-bar" max="100" value="70">
 									<strong>Skill Level: 70%</strong>
 								</progress>

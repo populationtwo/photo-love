@@ -20,12 +20,11 @@
 
 .page-header {
 	background-color: white;
-	@include breakpoint($medium-screen) {
+	@include media($medium-screen) {
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
-		background: #1f1f1f;
 		z-index: 12;
 		display: block;
 	}
