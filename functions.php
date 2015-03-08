@@ -134,6 +134,9 @@ function photolove_scripts() {
 
 	wp_enqueue_style( 'photolove-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'modernizr-script', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), '', true );
+
+
 	wp_enqueue_script( 'owl-script', get_template_directory_uri() . '/bower_components/owlcarousel/owl-carousel/owl.carousel.min.js', array(), '', true );
 
 	wp_enqueue_script( 'photolove-script', get_template_directory_uri() . '/assets/js/build/production.min.js', array(), '', true );
