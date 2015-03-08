@@ -32,6 +32,8 @@ $sans-serif: 'Montserrat', $helvetica, sans-serif;
 $small-screen: new-breakpoint(min-width 321px);
 $medium-screen: new-breakpoint(min-width 641px);
 $large-screen: new-breakpoint(min-width 1025px);
+$xlarge-screen: new-breakpoint(min-width 1441px);
+$xxlarge-screen: new-breakpoint(min-width 1921px);
 
 
 

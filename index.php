@@ -16,9 +16,9 @@ get_header(); ?>
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/unsplash_52a1c2d7d6f4f_1.jpg" alt="" />
 		</figure>
 		<div class="item-desc">
-			<p>Sustainability</p>
+			<p>Etiam massa et</p>
 
-			<p><strong>Starts with you</strong></p>
+			<p><strong>Vivamus posuere auctor commodo </strong></p>
 
 			<p><a class="cta" href="">Learn More</a></p>
 		</div>
@@ -29,9 +29,9 @@ get_header(); ?>
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/photo-1424847651672-bf20a4b0982b.jpg" alt="" />
 		</figure>
 		<div class="item-desc">
-			<p>Sustainability</p>
+			<p>Maecenas nunc nisi</p>
 
-			<p><strong>Starts with you</strong></p>
+			<p><strong>Volutpat a pharetra et, pulvinar id</strong></p>
 
 			<p><a class="cta" href="">Learn More</a></p>
 		</div>
@@ -42,9 +42,9 @@ get_header(); ?>
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/JaI1BywIT5Or8Jfmci1E_zakopane.jpg" alt="" />
 		</figure>
 		<div class="item-desc">
-			<p>Sustainability</p>
+			<p>Aenean ultricies massa</p>
 
-			<p><strong>Starts with you</strong></p>
+			<p><strong>Nec enim porta, quis sagittis purus faucibus</strong></p>
 
 			<p><a class="cta" href="">Learn More</a></p>
 		</div>
@@ -55,9 +55,9 @@ get_header(); ?>
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/f9c22c58.jpg" alt="" />
 		</figure>
 		<div class="item-desc">
-			<p>Sustainability</p>
+			<p>Aliquam malesuada</p>
 
-			<p><strong>Starts with you</strong></p>
+			<p><strong>Urna consequat molestie elementum</strong></p>
 
 			<p><a class="cta" href="">Learn More</a></p>
 		</div>

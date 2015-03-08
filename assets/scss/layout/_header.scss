@@ -57,38 +57,46 @@
 	}
 }
 
-
-
 /* --------------------------------------------------------------
 	Slider
 -------------------------------------------------------------- */
 
-#hero-header {.item {
-	padding: rem(180) 0 rem(180);
-	figure {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		-webkit-animation: feature-bg-anim .6s ease-in-out;
-		animation: feature-bg-anim .6s ease-in-out;
-		overflow: hidden;
-	}
+#hero-header {
+	.item {
+		padding: 0;
+		@include media($medium-screen){
+			padding: rem(20) 0;
+		}
+		@include media($large-screen){
+			padding: rem(70) 0;
+		}
+		@include media($xlarge-screen){
+			padding: rem(180) 0;
+		}
+		figure {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			-webkit-animation: feature-bg-anim .6s ease-in-out;
+			animation: feature-bg-anim .6s ease-in-out;
+			overflow: hidden;
+		}
 
-	img {
-		display: block;
-		width: 100%;
-		height: auto;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
 	}
-}
 	.color-overlay {
 		position: absolute;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: rgba(18,30,33,.3);
+		background-color: rgba(18, 30, 33, .3);
 		z-index: 99;
 	}
 	.item-desc {
@@ -102,49 +110,88 @@
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		margin: 0 auto;
-		padding: 32px;
+		padding: 0 15px;
+
 		text-align: center;
 		text-rendering: optimizeLegibility;
+		@include media($small-screen){
+			padding: 15px 20px;
+		}
+		@include media($medium-screen){
+			padding: 25px;
+		}
+		@include media($large-screen){
+			padding: 32px;
+		}
 		p {
-			font-size: 24px;
+			font-size: 14px;
 			line-height: 1.5em;
 			text-transform: none;
 			letter-spacing: 1px;
 			font-weight: 400;
 			font-style: italic;
 			color: #fff;
-			margin: 20px auto;
+			margin: 10px auto;
 			-webkit-transform: translatez(0);
+			@include media($medium-screen){
+				font-size: 22px;
+				margin: 12px auto;
+			}
+			@include media($large-screen){
+				font-size: 24px;
+				margin: 20px auto;
+			}
+
 			strong {
 				font-family: $sans-serif;
-				font-size: 68px;
+				font-size: 20px;
 				line-height: 1em;
 				text-transform: uppercase;
 				font-weight: 700;
 				font-style: normal;
 				color: #fff;
+				@include media($medium-screen){
+					font-size: 40px;
+				}
+				@include media($large-screen){
+					font-size: 50px;
+				}
+				@include media($xlarge-screen){
+					font-size: 60px;
+				}
 			}
 		}
 		.cta {
-					border: 2px solid #FFF;
-				font-size: rem(14);
-				padding: rem(6) rem(20);
-				font-weight: normal;
-				margin: rem(15) 0 0 0;
-				margin-right: 12px;
-				display: inline-block;
-				text-decoration: none;
-				min-width: 120px;
-				font-style: normal;
+			border: 2px solid #FFF;
+			font-size: rem(10);
+			padding: 0;
+			font-weight: normal;
+			margin: 0;
+
+			display: inline-block;
+			text-decoration: none;
+			min-width: 120px;
+			font-style: normal;
 			text-transform: uppercase;
 			font-family: $sans-serif;
 			color: #FFF;
+			@include media($medium-screen){
+				font-size: rem(12);
+				padding: rem(3) rem(10);
+				margin: rem(15) 0 0 0;
 
+
+			}
+			@include media($large-screen){
+				font-size: rem(14);
+				padding: rem(6) rem(20);
+
+			}
 			&:hover, &:active {
-					color: #000;
-					background: #FFF;
-					text-decoration: none!important;
-				}
+				color: #000;
+				background: #FFF;
+				text-decoration: none !important;
+			}
 		}
 	}
 
@@ -155,15 +202,19 @@
 -------------------------------------------------------------- */
 
 .owl-controls {
-	margin-top: -50px;
+	margin-top: -30px;
 	text-align: center;
 	z-index: 110;
 	position: relative;
+	@include media($medium-screen){
+		margin-top: -50px;
 
+
+	}
 	/* Styling Next and Prev buttons */
 	.owl-buttons div {
 		color: #FFF;
-		display: inline-block;
+		display: none;
 		zoom: 1;
 		*display: inline; /*IE7 life-saver */
 		margin: 5px;
@@ -173,8 +224,14 @@
 		//	background: #FFF;
 		filter: Alpha(Opacity=50); /*IE7 fix*/
 		opacity: 0.5;
-		top: -320px;
-
+		@include media($medium-screen){
+			top: -180px;
+			display: inline-block;
+		}
+		@include media($large-screen){
+			top: -320px;
+			display: inline-block;
+		}
 		position: absolute;
 		&.owl-next {
 			right: 0;
@@ -183,7 +240,6 @@
 			left: 0;
 		}
 	}
-
 
 	/* Clickable class fix problem with hover on touch devices */
 	/* Use it for non-touch hover action */
@@ -196,9 +252,14 @@
 	/* Styling Pagination*/
 
 	.owl-page {
-		display: inline-block;
+		display: none;
 		zoom: 1;
 		*display: inline; /*IE7 life-saver */
+		@include media($medium-screen){
+			display: inline-block;
+
+
+		}
 		span {
 			display: block;
 			width: 10px;
