@@ -171,11 +171,13 @@ progress, progress[role] {
 
 
 .site-info {
+	text-align: center;
 	@include span-columns(12);
 	@include media($medium-screen){
 		//		padding: 0;
+		text-align: left;
 
-		@include span-columns(6);
+		@include span-columns(8);
 	}
 }
 .footer-links-social {
@@ -184,7 +186,7 @@ progress, progress[role] {
 		//		padding: 0;
 		@include omega();
 
-		@include span-columns(6);
+		@include span-columns(4);
 	}
 }
 
@@ -195,7 +197,16 @@ progress, progress[role] {
 	text-transform: uppercase;
 	font-size: rem(11);
 	font-weight: 600;
-	li {
+	margin: 0 auto;
+	width: 200px;
+	float: none;
+	@include media($medium-screen) {
+		margin: 0;
+		width: auto;
+		float: right;
+
+	}
+		li {
 		padding: 0;
 		margin-left: rem(15);
 		font-size: rem(22);

@@ -136,10 +136,14 @@ function photolove_scripts() {
 
 	wp_enqueue_script( 'modernizr-script', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), '', true );
 
+	wp_enqueue_script( 'owl-script', get_template_directory_uri() . '/bower_components/owlcarousel/owl-carousel/owl.carousel.min.js', array('jquery'), '', true );
 
-	wp_enqueue_script( 'owl-script', get_template_directory_uri() . '/bower_components/owlcarousel/owl-carousel/owl.carousel.min.js', array(), '', true );
+	wp_enqueue_script( 'animate-number-script', get_template_directory_uri() . '/bower_components/jquery-animatenumber/jquery.animateNumber.min.js', array('jquery'), '', true );
 
-	wp_enqueue_script( 'photolove-script', get_template_directory_uri() . '/assets/js/build/production.min.js', array(), '', true );
+	wp_enqueue_script( 'classie-script', get_template_directory_uri() . '/bower_components/classie/classie.js', array('jquery'), '', true );
+
+
+	wp_enqueue_script( 'photolove-script', get_template_directory_uri() . '/assets/js/build/production.min.js', array('jquery','classie-script'), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -10,14 +10,14 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php photolove_posted_on(); ?>
+			<?php photolove_posted_on(); photolove_entry_footer(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php if ((has_post_thumbnail() && function_exists('has_post_thumbnail'))) { ?>
-			<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('post-image'); ?> </a>
+			<a href="<?php the_permalink() ?>" class="post-thumbnail"><?php the_post_thumbnail('post-image'); ?> </a>
 		<?php } ?>
 		<?php the_excerpt(); ?>
 

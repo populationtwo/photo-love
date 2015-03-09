@@ -1,6 +1,9 @@
 #stats {
-	background: $seashell url("../img/leica.jpg") center 400px no-repeat;
-	padding-bottom: rem(300);
+	background: $seashell;
+	@include media($large-screen) {
+		background: $seashell url("../img/leica.jpg") center 400px no-repeat;
+		padding-bottom: rem(300);
+	}
 	.container {
 		@extend .row;
 	}
@@ -15,7 +18,7 @@
 	p {
 		font-style: italic;
 	}
-	@include media($medium-screen){
+	@include media($medium-screen) {
 		width: 73%;
 	}
 }
@@ -25,6 +28,7 @@
 	overflow: hidden;
 	margin-left: 0;
 	list-style: none;
+	padding: 0;
 
 	> * {
 		margin: 0;
@@ -66,6 +70,7 @@
 		}
 
 		&:before {
+			@include media($large-screen){
 			content: "/";
 			color: black(0.15);
 			margin: 0 0.75rem;
@@ -73,6 +78,7 @@
 			top: 42px;
 			left: -24px;
 			font-size: rem(100);
+			}
 
 		}
 
@@ -85,15 +91,27 @@
 
 .stat {
 	text-align: center;
-	width: 25%;
+	width: 100%;
 	position: relative;
+	margin-bottom: rem(40);
+	@include media($medium-screen) {
+		width: 50%;
+	}
+	@include media($large-screen) {
+		width: 25%;
+		margin-bottom: 0;
+	}
 }
 
 .number {
-	font-size: rem(110);
+	font-size: rem(80);
 	line-height: 1;
 	font-style: italic;
-}
+	@include media($medium-screen) {
+
+		font-size: rem(110);
+
+	}	}
 
 .type {
 	display: inline-block;

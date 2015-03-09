@@ -1,13 +1,18 @@
 (function (window, $, undefined) {
 
 	$( document ).ready( function () {
-
-		var $heroHeader = $( document.getElementById( 'hero-header' ) ),
+		//Declare all variables
+		var bodyElement = document.body,
+			$heroHeader = $( document.getElementById( 'hero-header' ) ),
 			$mainMenuLink = $( document.getElementById( 'site-navigation' ) ).find( ' a[href^="#"]' ),
 			$mainMenuAllLinks = $( document.getElementById( 'site-navigation' ) ).find( 'a' ),
-			$porfolioCloseOverlay = $( '.close-overlay' ),
+			$portfolioCloseOverlay = $( '.close-overlay' ),
 			$portfolioPhoto = $( '.photo' ),
-			$graph = $( '.skill' );
+			$graph = $( '.skill' ),
+			toggleMobileMenu = document.getElementById( 'js-mobile-menu' ),
+			contentWrap = document.querySelector( '.content-wrap' ),
+			numberAnimationIsExecuted = false,
+			isOpen = false;
 
 
 		/**
@@ -29,7 +34,6 @@
 		function scrollNavigation() {
 			var document = $( document );
 
-			//document.scroll( onPageScroll );
 			$mainMenuLink.on( 'click', function (e) {
 				e.preventDefault();
 				document.off( "scroll" );
@@ -39,37 +43,17 @@
 				$( this ).addClass( 'active' );
 
 				var target = this.hash;
-				//menu = target;
 				$target = $( target );
 				$( 'html, body' ).stop().animate( {
 					'scrollTop': $target.offset().top + 2
-				}, 400, 'swing', function () {
-					//window.location.hash = target;
-					//$( document ).on( "scroll", onPageScroll );
-				} );
+				}, 400, 'swing' );
 			} );
 		}
 
-		//function onPageScroll(event){
-		//	var scrollPos = $(document).scrollTop();
-		//	$('#site-navigation a').each(function () {
-		//		var currLink = $(this);
-		//		var refElement = $(currLink.attr("href"));
-		//		if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-		//			$('#site-navigation a').removeClass("active");
-		//			currLink.addClass("active");
-		//		}
-		//		else{
-		//			currLink.removeClass("active");
-		//		}
-		//	});
-		//}
-
 
 		/**
-		 * Animate skills graph
+		 * Check if Element is in viewport
 		 */
-
 		function checkElementInViewport(elem) {
 			var $el = $( elem ),
 			// Get the scroll position.
@@ -83,7 +67,9 @@
 			return ( (elemBottomPosition > $viewportTop) && (elemTopPosition < viewportBottom));
 		}
 
-		// Check if it's time to start the animation.
+		/**
+		 * Animate skills graph
+		 */
 		function checkGraphAnimation() {
 			if ($graph.hasClass( 'anim' )) return;
 			if (checkElementInViewport( '#about' )) {
@@ -94,12 +80,11 @@
 		/**
 		 * Animate portfolio hover
 		 */
-
 		function imageHover() {
 			if (Modernizr.touch) {
 
 				// Show the close overlay button on mobile device
-				$porfolioCloseOverlay.removeClass( 'hidden' );
+				$portfolioCloseOverlay.removeClass( 'hidden' );
 
 				// Add hover class when tapped / clicked
 				$portfolioPhoto.click( function (e) {
@@ -129,15 +114,77 @@
 			}
 		}
 
+		/**
+		 * Animate stats number
+		 */
+
+		function checkAnimateStats() {
+			var numberShutters = $( '.animate-number-shutters' ),
+				numberClients = $( '.animate-number-clients' ),
+				numberProjects = $( '.animate-number-projects' ),
+				numberHours = $( '.animate-number-hours' );
+
+			if (checkElementInViewport( '#stats-animate-number' )) {  // check if the #stat section is in viewport
+
+				if (!numberAnimationIsExecuted) { // check if the number has been animated
+					numberAnimationIsExecuted = true;
+					numberShutters.animateNumber( {
+						number: 86,
+						easing: 'easeInOut'
+					}, 1000 );
+					numberClients.animateNumber( {
+						number: 251,
+						easing: 'easeInOut'
+					}, 1100 );
+					numberProjects.animateNumber( {
+						number: 658,
+						easing: 'easeInOut'
+
+					}, 1300 );
+					numberHours.animateNumber( {
+						number: 16,
+						easing: 'easeInOut'
+					}, 900 );
+					console.log( 'numberanimated' );
+				}
+
+			}
+		}
+
+		/**
+		 * Mobile Menu
+		 */
+
+		function toggleCanvasMenu() {
+			if (isOpen) {
+				classie.remove( bodyElement, 'ss-mobile-menu-active' );
+			}
+			else {
+				classie.add( bodyElement, 'ss-mobile-menu-active' );
+			}
+			isOpen = !isOpen;
+		}
+
+		function initCanvasMenu() {
+			toggleMobileMenu.addEventListener( 'click', toggleCanvasMenu );
+			contentWrap.addEventListener( 'click', function (e) {
+				var target = e.target;
+				if (isOpen && target !== toggleMobileMenu) {
+					toggleCanvasMenu();
+				}
+			} );
+		}
+
 
 		// Capture scroll events
 		$( window ).scroll( function () {
 			checkGraphAnimation();
-			//onPageScroll();
+			checkAnimateStats();
 		} );
 
 
 		function init() {
+			initCanvasMenu();
 			initSlider();
 			scrollNavigation();
 			imageHover();
@@ -148,4 +195,3 @@
 
 
 })( window, jQuery, undefined );
-

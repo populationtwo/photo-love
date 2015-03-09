@@ -140,21 +140,21 @@ get_header(); ?>
 			</p>
 
 		</div>
-		<ul class="stats-content">
+		<ul class="stats-content" id="stats-animate-number">
 			<li class="stat">
-				<div class="number">86K</div>
+				<div class="number"><span class="animate-number-shutters">0</span>K</div>
 				<span class="type">shutters count</span>
 			</li>
 			<li class="stat">
-				<div class="number">201</div>
+				<div class="number"><span class="animate-number-clients">0</span></div>
 				<span class="type">happy clients</span>
 			</li>
 			<li class="stat">
-				<div class="number">658</div>
+				<div class="number"><span class="animate-number-projects">0</span></div>
 				<span class="type">projects</span>
 			</li>
 			<li class="stat">
-				<div class="number">16K</div>
+				<div class="number"><span class="animate-number-hours">0</span>K</div>
 				<span class="type">hours spent</span>
 			</li>
 		</ul>

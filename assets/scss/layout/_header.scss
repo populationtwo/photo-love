@@ -8,14 +8,19 @@
 }
 
 .site-title {
-	padding: 0 rem(50) 0 0;
-	margin: rem(20) 0 rem(10);
+//	padding: 0 rem(50) 0 0;
+	margin: 0;
+	max-width: rem(120);
+	display: inline-block;
+	width: 92px;
+	@include media($large-screen){
+		margin: rem(20) 0 rem(10);
+		width: 100%;
+	}
 }
 
 .main-navigation {
-	@include span-columns(10);
 
-	@include omega();
 }
 
 .page-header {
@@ -28,11 +33,25 @@
 		z-index: 12;
 		display: block;
 	}
+	> .container {
+		@extend .row;
+	}
 }
 
 .main-navigation {
+	@include span-columns(10);
+	@include omega();
 	font-family: $sans-serif;
-	padding: rem(30) 0;
+	padding: rem(15) 0;
+	display: none;
+	@include media($medium-screen){
+		display: block;
+
+	}
+	@include media($large-screen){
+		padding: rem(30) 0;
+
+	}
 	a {
 		color: $gray;
 		text-decoration: none;
@@ -41,10 +60,6 @@
 
 		}
 	}
-
-}
-
-.menu {
 	ul {
 		@extend %inline-list;
 		float: right;
@@ -55,6 +70,18 @@
 		}
 	}
 }
+
+//.menu {
+//	ul {
+//		@extend %inline-list;
+//		float: right;
+//		> li {
+//			text-transform: uppercase;
+//			font-size: rem(13);
+//			margin-left: rem(50);
+//		}
+//	}
+//}
 
 /* --------------------------------------------------------------
 	Slider

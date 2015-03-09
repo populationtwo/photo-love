@@ -19,9 +19,24 @@
 
 <body <?php body_class(); ?>>
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'photolove' ); ?></a>
-
+	<div class="ss-mobile-header">
+		<nav class="mobile-header-inner">
+			<button class="menu-btn" id="js-mobile-menu">Open Menu</button>
+		</nav>
+	</div>
+	<!--end .ss-mobile-header-->
 	<div class="container-a outer-wrapper">
+		<aside class="ss-mobile-menu-wrapper">
+			<?php wp_nav_menu(
+				array(
+					'theme_location'  => 'primary',
+					'menu_class' => 'canvas-list',
+					'container'       => 'nav',
+					'container_class' => 'menu'
+				)
+			); ?>
 
+		</aside>
 		<div class="content-wrap canvas-content-wrap">
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'photolove' ); ?></a>
 

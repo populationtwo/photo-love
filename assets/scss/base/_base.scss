@@ -188,3 +188,158 @@ figure {
 		text-decoration: none !important;
 	}
 }
+
+
+
+
+
+
+
+/**
+ * Mobile Header
+ */
+.ss-mobile-header {
+	width: 100%;
+	height: rem(49);
+	line-height: rem(20);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 12;
+
+	@include media($medium-screen) {
+		display: none;
+	}
+}
+
+.mobile-header-inner {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	.menu-btn {
+//		float: right;
+		right: 0;
+		padding-left: rem(15);
+		a {
+			text-align: center;
+			width: auto;
+			padding: rem(4);
+			text-decoration: none;
+			display: inline-block;
+			position: relative;
+		}
+	}
+
+
+}
+
+
+
+
+
+/* --------------------------------------------------------------
+	Canvas Mobile Menu
+-------------------------------------------------------------- */
+
+.ss-mobile-menu-wrapper a {
+	color: red;
+	a:hover,
+	a:focus {
+		color: green;
+		text-decoration: none;
+	}
+}
+
+.content-main {
+	position: relative;
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		height: 100%;
+		background: black(0.3);
+		content: '';
+		opacity: 0;
+		@include translate3d(100%, 0, 0);
+		@include transition(opacity 0.4s);
+		@include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
+	}
+}
+
+.menu-btn {
+	position: fixed;
+	z-index: 1000;
+	margin: rem(5);
+	padding: 0;
+	width: rem(40);
+	height: rem(35);
+	border: none;
+	text-indent: rem(40);
+	font-size: rem(24);
+	color: transparent;
+	background: transparent;
+	&:before {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		bottom: 5px;
+		left: 5px;
+		background: linear-gradient($gray 20%, transparent 20%, transparent 40%, $gray 40%, $gray 60%, transparent 60%, transparent 80%, $gray 80%);
+		content: '';
+	}
+	&:hover {
+		&:before {
+			background: linear-gradient($gray-dark 20%, transparent 20%, transparent 40%, $gray-dark 40%, $gray-dark 60%, transparent 60%, transparent 80%, $gray-dark 80%);
+		}
+	}
+}
+
+.ss-mobile-menu-wrapper {
+	position: fixed;
+	top: 45px;
+	z-index: 1001;
+	width: 210px;
+	height: auto;
+	background: $gray-dark;
+	padding: rem(15) rem(30);
+	font-size: rem(18);
+	@include translate3d(-320px, 0, 0);
+	-webkit-transition: -webkit-transform 0.4s;
+	@include transition(transform 0.4s);
+	@include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
+	@include media($medium-screen) {
+		display: none;
+	}
+}
+
+.menu {
+	height: auto;
+}
+
+.canvas-list a {
+	display: block;
+	padding: rem(12) 0;
+	font-size: rem(14);
+	&:hover, &:focus {
+		text-decoration: none;
+		color: green;
+	}
+
+}
+
+.ss-mobile-menu-active {
+	.ss-mobile-menu-wrapper {
+		@include translate3d(0, 0, 0);
+		@include transition(transform 0.8s);
+		@include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
+	}
+
+	.content-main::before {
+		opacity: 1;
+		@include translate3d(0, 0, 0);
+		@include transition(opacity 0.8s);
+		@include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
+	}
+}

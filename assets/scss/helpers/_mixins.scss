@@ -47,3 +47,16 @@ $max-width: 1200px !default;
 		@content;
 	}
 }
+
+
+
+@mixin transform3d($trans) {
+	@include transform($trans);
+}
+@mixin translate3d($translate-x: $default-translate-x, $translate-y: $default-translate-y, $translate-z: $default-translate-z, $perspective: false) {
+	$trans: translate3d($translate-x, $translate-y, $translate-z);
+	@if $perspective {
+		$trans: perspective($perspective) $trans;
+	}
+	@include transform3d($trans);
+}
