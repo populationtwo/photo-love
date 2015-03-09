@@ -1,7 +1,7 @@
 #stats {
 	background: $seashell;
 	@include media($large-screen) {
-		background: $seashell url("../img/leica.jpg") center 400px no-repeat;
+		background: $seashell url("../img/leica-m.jpg") center 400px no-repeat;
 		padding-bottom: rem(300);
 	}
 	.container {

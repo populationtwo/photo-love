@@ -18,7 +18,7 @@ get_header(); ?>
 		<div class="item-desc">
 			<p>Etiam massa et</p>
 
-			<p><strong>Vivamus posuere auctor commodo </strong></p>
+			<p><strong>Vivamus posuere auctor commodo et</strong></p>
 
 			<p><a class="cta" href="">Learn More</a></p>
 		</div>
@@ -44,7 +44,7 @@ get_header(); ?>
 		<div class="item-desc">
 			<p>Aenean ultricies massa</p>
 
-			<p><strong>Nec enim porta, quis sagittis purus faucibus</strong></p>
+			<p><strong>Nec enim porta, quis sagittis faucibus</strong></p>
 
 			<p><a class="cta" href="">Learn More</a></p>
 		</div>

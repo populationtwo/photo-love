@@ -95,7 +95,7 @@
 				} );
 
 				// handle the closing of the overlay
-				$porfolioCloseOverlay.click( function (e) {
+				$portfolioCloseOverlay.click( function (e) {
 					e.preventDefault();
 					e.stopPropagation();
 					if ($( this ).closest( '.photo' ).hasClass( 'hover' )) {
@@ -145,7 +145,6 @@
 						number: 16,
 						easing: 'easeInOut'
 					}, 900 );
-					console.log( 'numberanimated' );
 				}
 
 			}

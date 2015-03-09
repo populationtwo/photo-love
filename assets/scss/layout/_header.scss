@@ -190,7 +190,7 @@
 		.cta {
 			border: 2px solid #FFF;
 			font-size: rem(10);
-			padding: 0;
+			padding: 0 rem(10);
 			font-weight: normal;
 			margin: 0;
 
@@ -251,11 +251,15 @@
 		filter: Alpha(Opacity=50); /*IE7 fix*/
 		opacity: 0.5;
 		@include media($medium-screen){
-			top: rem(-180);
+			top: rem(-150);
 			display: inline-block;
 		}
 		@include media($large-screen){
-			top: -3rem(20);
+			top: rem(-250);
+			display: inline-block;
+		}
+		@include media($xlarge-screen){
+			top: rem(-320);
 			display: inline-block;
 		}
 		position: absolute;
@@ -316,7 +320,9 @@
 		border-radius: 30px;
 	}
 }
-
+.owl-wrapper {
+	background: #2e2e2e url("../img/noise.png");
+}
 /* preloading images */
 .owl-item.loading {
 	min-height: rem(150);
