@@ -130,9 +130,7 @@ Accessibility
 		z-index: 100000; /* Above WP toolbar. */
 	}
 
-
 }
-
 
 /* --------------------------------------------------------------
 Base elements
@@ -189,16 +187,11 @@ figure {
 	}
 }
 
-
-
-
-
-
-
 /**
  * Mobile Header
  */
 .ss-mobile-header {
+	background: white;
 	width: 100%;
 	height: rem(49);
 	line-height: rem(20);
@@ -206,7 +199,7 @@ figure {
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 12;
+	z-index: 113;
 
 	@include media($medium-screen) {
 		display: none;
@@ -217,8 +210,15 @@ figure {
 	height: 100%;
 	width: 100%;
 	position: relative;
+	.mobile-header-content {
+		float: left;
+		width: rem(110);
+		height: 100%;
+		padding-left: rem(15);
+		padding-top: rem(10);
+	}
 	.menu-btn {
-//		float: right;
+		//		float: right;
 		right: 0;
 		padding-left: rem(15);
 		a {
@@ -231,22 +231,17 @@ figure {
 		}
 	}
 
-
 }
-
-
-
-
 
 /* --------------------------------------------------------------
 	Canvas Mobile Menu
 -------------------------------------------------------------- */
 
 .ss-mobile-menu-wrapper a {
-	color: red;
+	color: $gray;
 	a:hover,
 	a:focus {
-		color: green;
+		color: $matisse;
 		text-decoration: none;
 	}
 }
@@ -298,40 +293,55 @@ figure {
 
 .ss-mobile-menu-wrapper {
 	position: fixed;
-	top: 45px;
+	top: rem(48);
+	right: rem(-210);
 	z-index: 1001;
-	width: 210px;
+	width: rem(210);
 	height: auto;
-	background: $gray-dark;
+	background: $seashell;
 	padding: rem(15) rem(30);
 	font-size: rem(18);
-	@include translate3d(-320px, 0, 0);
+	@include translate3d(0, 0, 0);
 	-webkit-transition: -webkit-transform 0.4s;
 	@include transition(transform 0.4s);
 	@include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
+
 	@include media($medium-screen) {
 		display: none;
 	}
 }
 
-.menu {
+.mobile-menu {
 	height: auto;
+	ul {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		@include media($small-screen) {
+			text-align: left;
+
+		}
+	}
+	li {
+		font-family: $sans-serif;
+	}
 }
 
 .canvas-list a {
 	display: block;
 	padding: rem(12) 0;
-	font-size: rem(14);
+	font-size: rem(16);
 	&:hover, &:focus {
 		text-decoration: none;
-		color: green;
+		color: $matisse;
 	}
 
 }
 
 .ss-mobile-menu-active {
 	.ss-mobile-menu-wrapper {
-		@include translate3d(0, 0, 0);
+		@include translate3d(-210px, 0, 0);
 		@include transition(transform 0.8s);
 		@include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
 	}

@@ -21,6 +21,11 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'photolove' ); ?></a>
 	<div class="ss-mobile-header">
 		<nav class="mobile-header-inner">
+			<div class="mobile-header-content">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/photo-love-logo-grey.jpg" alt="<?php bloginfo( 'name' ); ?>" /> </a></h1>
+				</a>
+			</div>
 			<button class="menu-btn" id="js-mobile-menu">Open Menu</button>
 		</nav>
 	</div>
@@ -32,7 +37,7 @@
 					'theme_location'  => 'primary',
 					'menu_class' => 'canvas-list',
 					'container'       => 'nav',
-					'container_class' => 'menu'
+					'container_class' => 'mobile-menu'
 				)
 			); ?>
 

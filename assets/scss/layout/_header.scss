@@ -12,7 +12,7 @@
 	margin: 0;
 	max-width: rem(120);
 	display: inline-block;
-	width: 92px;
+	width: rem(95);
 	@include media($large-screen){
 		margin: rem(20) 0 rem(10);
 		width: 100%;
@@ -30,7 +30,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 12;
+		z-index: 113;
 		display: block;
 	}
 	> .container {
@@ -131,59 +131,59 @@
 		z-index: 100;
 		position: relative;
 		width: 100%;
-		max-width: 956px;
+		max-width: rem(956);
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		margin: 0 auto;
-		padding: 0 15px;
+		padding: 0 rem(15);
 
 		text-align: center;
 		text-rendering: optimizeLegibility;
 		@include media($small-screen){
-			padding: 15px 20px;
+			padding: rem(15) rem(20);
 		}
 		@include media($medium-screen){
-			padding: 25px;
+			padding: rem(25);
 		}
 		@include media($large-screen){
-			padding: 32px;
+			padding: rem(32);
 		}
 		p {
-			font-size: 14px;
+			font-size: rem(14);
 			line-height: 1.5em;
 			text-transform: none;
 			letter-spacing: 1px;
 			font-weight: 400;
 			font-style: italic;
 			color: #fff;
-			margin: 10px auto;
+			margin: rem(10) auto;
 			-webkit-transform: translatez(0);
 			@include media($medium-screen){
-				font-size: 22px;
-				margin: 12px auto;
+				font-size: rem(22);
+				margin: rem(12) auto;
 			}
 			@include media($large-screen){
-				font-size: 24px;
-				margin: 20px auto;
+				font-size: rem(24);
+				margin: rem(20) auto;
 			}
 
 			strong {
 				font-family: $sans-serif;
-				font-size: 20px;
+				font-size: rem(20);
 				line-height: 1em;
 				text-transform: uppercase;
 				font-weight: 700;
 				font-style: normal;
 				color: #fff;
 				@include media($medium-screen){
-					font-size: 40px;
+					font-size: rem(40);
 				}
 				@include media($large-screen){
-					font-size: 50px;
+					font-size: rem(50);
 				}
 				@include media($xlarge-screen){
-					font-size: 60px;
+					font-size: rem(60);
 				}
 			}
 		}
@@ -196,7 +196,7 @@
 
 			display: inline-block;
 			text-decoration: none;
-			min-width: 120px;
+			min-width: 1rem(20);
 			font-style: normal;
 			text-transform: uppercase;
 			font-family: $sans-serif;
@@ -228,12 +228,12 @@
 -------------------------------------------------------------- */
 
 .owl-controls {
-	margin-top: -30px;
+	margin-top: rem(-30);
 	text-align: center;
 	z-index: 110;
 	position: relative;
 	@include media($medium-screen){
-		margin-top: -50px;
+		margin-top: rem(-50);
 
 
 	}
@@ -243,19 +243,19 @@
 		display: none;
 		zoom: 1;
 		*display: inline; /*IE7 life-saver */
-		margin: 5px;
-		padding: 3px 10px;
+		margin: rem(5);
+		padding: rem(3) rem(10);
 		font-size: rem(30);
 		border-radius: 30px;
 		//	background: #FFF;
 		filter: Alpha(Opacity=50); /*IE7 fix*/
 		opacity: 0.5;
 		@include media($medium-screen){
-			top: -180px;
+			top: rem(-180);
 			display: inline-block;
 		}
 		@include media($large-screen){
-			top: -320px;
+			top: -3rem(20);
 			display: inline-block;
 		}
 		position: absolute;
@@ -288,12 +288,12 @@
 		}
 		span {
 			display: block;
-			width: 10px;
-			height: 10px;
-			margin: 5px 4px;
+			width: rem(10);
+			height: rem(10);
+			margin: rem(5) rem(4);
 			filter: Alpha(Opacity=80); /*IE7 fix*/
 			opacity: 0.8;
-			border-radius: 20px;
+			border-radius: rem(20);
 			background: #FFF;
 		}
 	}
@@ -311,14 +311,14 @@
 		height: auto;
 		width: auto;
 		color: #FFF;
-		padding: 2px 10px;
-		font-size: 12px;
+		padding: rem(2) rem(10);
+		font-size: rem(12);
 		border-radius: 30px;
 	}
 }
 
 /* preloading images */
 .owl-item.loading {
-	min-height: 150px;
+	min-height: rem(150);
 	background: url(AjaxLoader.gif) no-repeat center center
 }
