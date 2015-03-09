@@ -7,10 +7,8 @@
 	color: $gray-lighter;
 	a {
 		color: white(0.8);
-
 		&:hover {
 			color: white;
-
 		}
 	}
 }
@@ -18,7 +16,6 @@
 .page-footer {
 	@include outer-container();
 	@extend .row;
-
 }
 
 .page-footer-inner {
@@ -28,10 +25,7 @@
 
 .bio {
 	@include span-columns(12);
-	//	@include omega();
 	@include media($medium-screen){
-		//		padding: 0;
-
 		@include span-columns(6);
 	}
 }
@@ -39,8 +33,6 @@
 .bio-image {
 	@include span-columns(12);
 	@include media($small-screen){
-		//		padding: 0;
-
 		@include span-columns(4);
 	}
 }
@@ -49,8 +41,6 @@
 	@include span-columns(12);
 	@include omega();
 	@include media($small-screen){
-		//		padding: 0;
-
 		@include span-columns(8);
 	}
 	h2 {
@@ -68,10 +58,7 @@
 
 .skills {
 	@include span-columns(12);
-//	@include omega();
 	@include media($medium-screen){
-		//		padding: 0;
-
 		@include span-columns(6);
 		@include omega();
 	}
@@ -183,9 +170,7 @@ progress, progress[role] {
 .footer-links-social {
 	@include span-columns(12);
 	@include media($medium-screen){
-		//		padding: 0;
 		@include omega();
-
 		@include span-columns(4);
 	}
 }

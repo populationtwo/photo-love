@@ -9,9 +9,6 @@
 .row {
 	@include clearfix;
 	padding: 0 rem(15);
-	@include media($medium-screen) {
-		//		padding: 0;
-	}
 }
 
 .main-content {
@@ -73,9 +70,7 @@
 	}
 
 	@include media($medium-screen) {
-
 		width: 73%;
-
 	}
 }
 
@@ -100,9 +95,7 @@
 		}
 
 		@include media($medium-screen) {
-
 			width: 20%;
-
 		}
 
 	}
@@ -202,7 +195,6 @@ a.expand {
 	}
 	@include media($medium-screen) {
 		width: 73%;
-
 	}
 }
 

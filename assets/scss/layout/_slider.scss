@@ -1,0 +1,103 @@
+
+/* --------------------------------------------------------------
+	Owl Slider
+-------------------------------------------------------------- */
+.owl-wrapper-outer {
+	background: #000;
+}
+.owl-controls {
+	margin-top: rem(-30);
+	text-align: center;
+	z-index: 110;
+	position: relative;
+	@include media($medium-screen){
+		margin-top: rem(-50);
+	}
+	/* Styling Next and Prev buttons */
+	.owl-buttons div {
+		color: #FFF;
+		display: none;
+		zoom: 1;
+		*display: inline; /*IE7 life-saver */
+		margin: rem(5);
+		padding: rem(3) rem(10);
+		font-size: rem(30);
+		border-radius: 30px;
+		filter: Alpha(Opacity=50); /*IE7 fix*/
+		opacity: 0.5;
+		@include media($medium-screen){
+			top: rem(-150);
+			display: inline-block;
+		}
+		@include media($large-screen){
+			top: rem(-250);
+			display: inline-block;
+		}
+		@include media($xlarge-screen){
+			top: rem(-320);
+			display: inline-block;
+		}
+		position: absolute;
+		&.owl-next {
+			right: 0;
+		}
+		&.owl-prev {
+			left: 0;
+		}
+	}
+
+	/* Clickable class fix problem with hover on touch devices */
+	/* Use it for non-touch hover action */
+	&.clickable .owl-buttons div:hover {
+		filter: Alpha(Opacity=100); /*IE7 fix*/
+		opacity: 1;
+		text-decoration: none;
+	}
+
+	/* Styling Pagination*/
+
+	.owl-page {
+		display: none;
+		zoom: 1;
+		*display: inline; /*IE7 life-saver */
+		@include media($medium-screen){
+			display: inline-block;
+		}
+		span {
+			display: block;
+			width: rem(10);
+			height: rem(10);
+			margin: rem(5) rem(4);
+			filter: Alpha(Opacity=80); /*IE7 fix*/
+			opacity: 0.8;
+			border-radius: rem(20);
+			background: #FFF;
+		}
+	}
+
+	.owl-page.active span,
+	&.clickable .owl-page:hover span {
+		filter: Alpha(Opacity=100); /*IE7 fix*/
+		opacity: 1;
+		background: #000;
+
+	}
+
+	/* If PaginationNumbers is true */
+	.owl-page span.owl-numbers {
+		height: auto;
+		width: auto;
+		color: #FFF;
+		padding: rem(2) rem(10);
+		font-size: rem(12);
+		border-radius: 30px;
+	}
+}
+.owl-wrapper {
+	background: #2e2e2e url("../img/noise.png");
+}
+/* preloading images */
+.owl-item.loading {
+	min-height: rem(150);
+	background: url(AjaxLoader.gif) no-repeat center center
+}

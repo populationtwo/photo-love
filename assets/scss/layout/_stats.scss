@@ -70,14 +70,14 @@
 		}
 
 		&:before {
-			@include media($large-screen){
-			content: "/";
-			color: black(0.15);
-			margin: 0 0.75rem;
-			position: absolute;
-			top: rem(42);
-			left: rem(-24);
-			font-size: rem(100);
+			@include media($large-screen) {
+				content: "/";
+				color: black(0.15);
+				margin: 0 0.75rem;
+				position: absolute;
+				top: rem(42);
+				left: rem(-24);
+				font-size: rem(100);
 			}
 
 		}
@@ -108,10 +108,9 @@
 	line-height: 1;
 	font-style: italic;
 	@include media($medium-screen) {
-
 		font-size: rem(110);
-
-	}	}
+	}
+}
 
 .type {
 	display: inline-block;
